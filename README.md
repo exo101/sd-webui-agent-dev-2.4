@@ -26,30 +26,7 @@ SD WebUI 全能生图智能体扩展 — 通过自然语言对话驱动 Stable D
 
 编辑 `agent_config.json` 设置 API 提供商与密钥：
 
-```json
-{
-  "api_provider": "local-llama",
-  "base_url": "http://127.0.0.1:1234/v1",
-  "model": "qwen3.8-27b",
-  "image_api_provider": "YoboxAI",
-  "image_api_key": "sk-xxx",
-  "video_api_provider": "YoboxAI",
-  "video_api_key": "sk-xxx"
-}
-```
 
-## 模块结构
-
-| 文件 | 说明 |
-|------|------|
-| `agent.py` | 入口，注册 WebUI Tab |
-| `agent_chat.py` | 对话核心（流式输出 / 工具执行） |
-| `agent_ui.py` | Gradio 界面 / @mention 系统 |
-| `agent_config.py` | 配置读写 |
-| `agent_tools*.py` | 工具实现（按领域拆分） |
-| `agent_prompts.py` | 系统提示词 |
-| `agent_routing.py` | 路由分发 |
-| `photoshop_mcp.py` | Photoshop MCP 集成 |
 
 ## 许可证
 
